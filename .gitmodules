@@ -1,0 +1,6 @@
+[submodule "openresty-gdb-utils"]
+	path = openresty-gdb-utils
+	url = https://github.com/openresty/openresty-gdb-utils.git
+[submodule "openresty-systemtap-toolkit"]
+	path = openresty-systemtap-toolkit
+	url = https://github.com/openresty/openresty-systemtap-toolkit.git
