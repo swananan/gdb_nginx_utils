@@ -1,0 +1,41 @@
+# basic config # 
+set print pretty on
+set pagination off
+# set so=vertical
+# set winsplit orientation=vertical
+# map <F9> :until<cr>
+# set ignorecase
+# set ts=4
+# set wso=vertical
+# set eld=shortarrow
+# set hls
+
+# C++ STL
+python
+import sys
+sys.path.append('/usr/share/gcc-4.8.2/python')
+from libstdcxx.v6.printers import register_libstdcxx_printers
+register_libstdcxx_printers(None)
+end
+
+# my nginx gdb scripts
+python
+import sys
+sys.path.append('/home/wzz/Scripts/gdb_nginx_utils')
+end
+source /home/wzz/Scripts/gdb_nginx_utils/ngx_pretty_printer.py
+source /home/wzz/Scripts/gdb_nginx_utils/ngx_gdb_commond.py
+# source /home/wzz/Scripts/gdb_nginx_utils/ngx_gdb_callback.py
+
+
+# openresty-gdb-utils
+python 
+import sys
+sys.path.append('/home/wzz/Scripts/gdb_nginx_utils/openresty-gdb-utils')
+end
+
+source /home/wzz/Scripts/gdb_nginx_utils/openresty-gdb-utils/luajit20.gdb
+source /home/wzz/Scripts/gdb_nginx_utils/openresty-gdb-utils/ngx-lua.gdb
+source /home/wzz/Scripts/gdb_nginx_utils/openresty-gdb-utils/luajit21.py
+source /home/wzz/Scripts/gdb_nginx_utils/openresty-gdb-utils/ngx-raw-req.py
+# set python print-stack full
